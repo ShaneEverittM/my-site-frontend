@@ -1,0 +1,12 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    box-shadow: 0px 7px 4px -1px rgba(0,0,0,0.75);
+}
+
+.top-left-icons {
+    display: flex;
+    flex-direction: row-reverse;
+}

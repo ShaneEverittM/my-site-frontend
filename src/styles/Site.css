@@ -1,0 +1,10 @@
+.site {
+    background-color: #282828;
+    margin: 0px;
+    height: max-content;
+    color: hsla(0,0%,100%,.87);
+}
+
+body {
+    margin: 0px;
+}
