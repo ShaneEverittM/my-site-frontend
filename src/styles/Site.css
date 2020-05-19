@@ -17,17 +17,7 @@ body {
     width: 100%;
 }
 
-.sidebar {
-    display: flex;
-    width: 20%;
-    background-color: #313131;
-    z-index: 10;
-}
 
-.no-sidebar {
-    display: flex;
-    width: 0%;
-}
 
 .image{
     display: flex;

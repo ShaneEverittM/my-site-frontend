@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
-import { Home, About } from './pages/'
+import { Home, About, FileSystem } from './pages/'
 import { Header, SideBar } from './components/'
 
 
@@ -28,6 +28,7 @@ const App = () => {
           <div className="body">
             <Route exact path="/" component={() => <Home name="Shane" />} />
             <Route path="/about/" component={() => <About />} />
+            <Route path="/filesystem/" component={() => <FileSystem />} />
           </div>
         </div>
       </div >
