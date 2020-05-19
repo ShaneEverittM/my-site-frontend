@@ -1,6 +1,6 @@
 import React from 'react';
 import Meme from '../images/outlook3.png'
-import '../styles/Home.css'
+import '../styles/Page.css'
 
 
 const About = () => {

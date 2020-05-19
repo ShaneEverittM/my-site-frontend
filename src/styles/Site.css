@@ -20,6 +20,8 @@ body {
 .sidebar {
     display: flex;
     width: 20%;
+    background-color: #313131;
+    z-index: 10;
 }
 
 .no-sidebar {

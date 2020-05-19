@@ -4,7 +4,9 @@ import '../styles/Site.css'
 const SideBar = () => {
     return (
         <div className='sidebar'>
-            <img className='image' src={Meme} alt="Friendship STRENTH with outlook" />
+            <div>Projects
+                
+            </div>
         </div>
     )
 }
