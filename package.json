@@ -18,6 +18,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "react-xterm": "^2.0.4",
+    "terminal-in-react": "^4.3.1",
     "typescript": "^3.9.3",
     "xterm": "^4.6.0"
   },
