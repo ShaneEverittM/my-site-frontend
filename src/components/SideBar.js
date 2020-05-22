@@ -10,13 +10,13 @@ const SideBar = () => {
                 <Link to="/filesystem" style={{ all: "unset" }}>
                     <div className='sidebar-list-item'>
                         <FaFolder />
-                        FileSystem
+                        <div style={{ marginLeft: "10px" }}>FileSystem</div>
                     </div>
                 </Link>
                 <Link to="/filesystem" style={{ all: "unset" }}>
                     <div className='sidebar-list-item'>
                         <FaLinux />
-                        Scheduler
+                        <div style={{ marginLeft: "10px" }}>Scheduler</div>
                     </div>
                 </Link>
             </div>

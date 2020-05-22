@@ -28,7 +28,7 @@ const App = () => {
           <div className="body">
             <Route exact path="/" component={() => <Home name="Shane" />} />
             <Route path="/about/" component={() => <About />} />
-            <Route path="/filesystem/" component={() => <FileSystem />} />
+            <Route path="/filesystem/" component={() => <FileSystem id="1" />} />
           </div>
         </div>
       </div >
