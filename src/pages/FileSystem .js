@@ -45,11 +45,11 @@ class FileSystem extends Component {
                     commandPassThrough={(cmd, print) => {
                         console.log(`Sending command: ${cmd}`)
                         let space_cmd = `${cmd}`.split(",").join(" ")
-                        axios.post(`${hostname}/filesystem`, { command: `${space_cmd}` }).then(res => { print(res.data["message"]); })
+                        axios.post(`${hostname}/filesystem`, { command: `${space_cmd}` }).then(res => { print(res.data["msg"]); })
 
                     }}
 
-                    msg='This is my simulated filesystem written in Rust, type "start" to begin.'
+                    msg='This is my simulated filesystem written in Rust, type "in" to begin.'
                 />
                 {/* <div style={{
                     display: "flex",
