@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Terminal from 'terminal-in-react';
 import axios from 'axios'
+import helpText from '../resources/help'
 const hostname = 'http://localhost:8000'
 
 class FileSystem extends Component {
@@ -22,44 +23,39 @@ class FileSystem extends Component {
                     maxHeight: "90%",
                     maxWidth: "90%",
                     fontSize: 26,
-                    overflow: "hidden"
+                    overflow: "hidden",
+                    boxShadow: "4px 7px 7px 0px rgba(0,0,0,0.75)"
                 }}
             >
                 <Terminal
                     style={{ fontWeight: "bold", fontSize: "1em" }}
-                    color='green'
-                    backgroundColor='black'
-                    barColor='black'
+                    color='white'
+                    backgroundColor='#313131'
+                    prompt='white'
+                    outputColor='white'
+                    promptSymbol='📂 >'
+                    barColor='#357cf0'
                     allowTabs={false}
                     showActions={false}
                     actionHandlers={{
                         handleClose: () => {/* Can't close */ },
                     }}
                     commands={{
-                        showmsg: this.showMsg,
-                    }}
-                    descriptions={{
-                        showmsg: 'shows a message',
+                        help: (args, print, runCommand) => {
+                            print(helpText)
+                        },
+
                     }}
                     startState="maximised"
                     commandPassThrough={(cmd, print) => {
                         console.log(`Sending command: ${cmd}`)
                         let space_cmd = `${cmd}`.split(",").join(" ")
-                        axios.post(`${hostname}/filesystem`, { command: `${space_cmd}` }).then(res => { print(res.data["msg"]); })
+                        axios.post(`${hostname}/filesystem`, { command: `${space_cmd}` }).then(res => { print(res.data["msg"].substring(0, res.data["msg"].indexOf(">") - 3)); })
 
                     }}
 
                     msg='This is my simulated filesystem written in Rust, type "in" to begin.'
                 />
-                {/* <div style={{
-                    display: "flex",
-                    height: "15px",
-                    zIndex: 100,
-                    backgroundColor: "#282828",
-                    width: "90%",
-                    position: "absolute",
-                    bottom: "40px"
-                }}></div> */}
             </div >
         );
     }
