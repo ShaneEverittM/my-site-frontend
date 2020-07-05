@@ -5,11 +5,6 @@ import helpText from '../resources/help'
 const hostname = 'http://localhost:8000'
 
 class FileSystem extends Component {
-
-    // async componentDidMount() {
-    //     await axios.post(`${hostname}/filesystem`, { command: "init" })
-    // }
-    // startSimulation = () => 'Hello World'
     render() {
         return (
             <div
