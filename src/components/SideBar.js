@@ -7,13 +7,13 @@ const SideBar = () => {
         <div className='sidebar'>
             <header className="sidebar-header">Projects</header>
             <div className='sidebar-list'>
-                <Link to="/filesystem" style={{ all: "unset" }}>
+                <Link to="/projects/fsystem" style={{ all: "unset" }}>
                     <div className='sidebar-list-item'>
                         <FaFolder />
                         <div style={{ marginLeft: "10px" }}>FileSystem</div>
                     </div>
                 </Link>
-                <Link to="/filesystem" style={{ all: "unset" }}>
+                <Link to="/projects/prmanager" style={{ all: "unset" }}>
                     <div className='sidebar-list-item'>
                         <FaLinux />
                         <div style={{ marginLeft: "10px" }}>Scheduler</div>

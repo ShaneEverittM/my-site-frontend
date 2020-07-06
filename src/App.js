@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
-import { Home, About, FileSystem } from './pages/'
+import { Home, About, Project } from './pages/'
 import { Header, SideBar } from './components/'
 
 
@@ -28,7 +28,8 @@ const App = () => {
           <div className="body">
             <Route exact path="/" component={() => <Home name="Shane" />} />
             <Route path="/about/" component={() => <About />} />
-            <Route path="/filesystem/" component={() => <FileSystem />} />
+            <Route path="/projects/fsystem/" component={() => <Project prompt='📂 >' project="fsystem" />} />
+            <Route path="/projects/prmanager/" component={() => <Project prompt='>' project="prmanager" />} />
           </div>
         </div>
       </div >

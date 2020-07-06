@@ -4,7 +4,7 @@ import axios from 'axios'
 import helpText from '../resources/help'
 const hostname = 'http://localhost:8000'
 
-class FileSystem extends Component {
+class Project extends Component {
     render() {
         return (
             <div
@@ -28,7 +28,7 @@ class FileSystem extends Component {
                     backgroundColor='#313131'
                     prompt='white'
                     outputColor='white'
-                    promptSymbol='📂 >'
+                    promptSymbol={this.props.prompt}
                     barColor='#357cf0'
                     allowTabs={false}
                     showActions={false}
@@ -45,7 +45,7 @@ class FileSystem extends Component {
                     commandPassThrough={(cmd, print) => {
                         console.log(`Sending command: ${cmd}`)
                         let space_cmd = `${cmd}`.split(",").join(" ")
-                        axios.post(`${hostname}/filesystem`, { command: `${space_cmd}` }).then(res => { print(res.data["msg"].substring(0, res.data["msg"].indexOf(">") - 3)); })
+                        axios.post(`${hostname}/projects/${this.props.project}`, { command: `${space_cmd}` }).then(res => { print(res.data["msg"].substring(0, res.data["msg"].indexOf(">") - 3)); })
 
                     }}
 
@@ -55,4 +55,4 @@ class FileSystem extends Component {
         );
     }
 }
-export default FileSystem;
+export default Project;
